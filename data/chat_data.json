@@ -1,0 +1,28 @@
+{
+    "messages": [
+        {
+            "id": "681990ca2406a",
+            "user_id": 1,
+            "username": "admin",
+            "message": "Hai tambahin channel tvri dong",
+            "timestamp": "2025-05-06T04:32:10.142Z",
+            "read": true
+        },
+        {
+            "id": "6819fc70c3039",
+            "user_id": 1,
+            "username": "admin",
+            "message": "Min ada link yang mati nih",
+            "timestamp": "2025-05-06T12:11:28.768Z",
+            "read": true
+        },
+        {
+            "id": "681a00b468912",
+            "user_id": 1,
+            "username": "admin",
+            "message": "test",
+            "timestamp": "2025-05-06T12:29:40.424Z",
+            "read": false
+        }
+    ]
+}

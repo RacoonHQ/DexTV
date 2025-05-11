@@ -1,0 +1,494 @@
+{
+    "categories": {
+        "news": {
+            "name": "News",
+            "icon": "fas fa-newspaper",
+            "channels": [
+                {
+                    "id": "news_1",
+                    "name": "BBC World News",
+                    "url": "https:\/\/d1kvlt93j1bc49.cloudfront.net\/v1\/master\/3722c60a815c199d9c0ef36c5b73da68a62b09d1\/cc-6vpx7bvwjm7ao\/v1\/amcnetworks_bbcnews_1\/samsungheadend_us\/latest\/main\/hls\/playlist.m3u8",
+                    "logo": "bbc.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_2",
+                    "name": "SKY News",
+                    "url": "https:\/\/linear417-gb-hls1-prd-ak.cdn.skycdp.com\/100e\/Content\/HLS_001_1080_30\/Live\/channel(skynews)\/index_1080-30.m3u8",
+                    "logo": "sky.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_3",
+                    "name": "NBC News",
+                    "url": "https:\/\/apollo.production-public.tubi.io\/live\/ac-nbc-news-now2.m3u8",
+                    "logo": "nbc.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_4",
+                    "name": "TVRI WORLD",
+                    "url": "https:\/\/ott-balancer.tvri.go.id\/live\/eds\/SportHD\/hls\/SportHD.m3u8",
+                    "logo": "fox.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_5",
+                    "name": "NUSANTARATV",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h37\/index.m3u8?app_type=web&userid=lite&chname=Nusantara_TV_NTV-",
+                    "logo": "nusantaratv.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_6",
+                    "name": "JAKTV",
+                    "url": "https:\/\/op-group1-swiftservesd-1.dens.tv\/s\/s123\/index2.m3u8?app_type=web&userid=lite&chname=Jak_tv",
+                    "logo": "jaktv.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_7",
+                    "name": "ROCKENTER",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h16\/01.m3u8?app_type=web&userid=lite&chname=ROCK_Entertainment_HD",
+                    "logo": "rockenter.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_8",
+                    "name": "TV5 MONDE",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h216\/index.m3u8?app_type=web&userid=lite&chname=TV5MONDE_Style_HD",
+                    "logo": "tv5 monde.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_9",
+                    "name": "QWEST TV",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h153\/index2.m3u8?app_type=web&userid=lite&chname=Qwest_TV",
+                    "logo": "tv5 monde.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_10",
+                    "name": "WEDO STORY",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h69\/wedotv_big_stories.m3u8?app_type=web&userid=lite&chname=wedotvBig_Stories",
+                    "logo": "wedo story.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_11",
+                    "name": "ALJAZERA TV",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h143\/index2.m3u8?app_type=web&userid=lite&chname=Al_Jazeera_English",
+                    "logo": "wedo story.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_12",
+                    "name": "NHK WORLD",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h23\/index.m3u8?app_type=web&userid=lite&chname=NHK_WORLD-JAPAN",
+                    "logo": "nhk world.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_13",
+                    "name": "TRT WORLD",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h156\/index2.m3u8?app_type=web&userid=lite&chname=TRT_World",
+                    "logo": "nhk world.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_14",
+                    "name": "TBN ASIA",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/s\/s39\/index.m3u8?app_type=web&userid=lite&chname=TBN",
+                    "logo": "tbn.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_15",
+                    "name": "DW TV",
+                    "url": "https:\/\/op-group2-swiftservesd-1.dens.tv\/s\/s11\/index.m3u8?app_type=web&userid=lite&chname=DW-TV",
+                    "logo": "tbn.png",
+                    "status": "active"
+                },
+                {
+                    "id": "news_16",
+                    "name": "CNN",
+                    "url": "https:\/\/live.cnnindonesia.com\/livecnn\/smil:cnntv.smil\/chunklist_w80388450_b384000_sleng.m3u8",
+                    "logo": "cnn.png",
+                    "status": "active"
+                }
+            ]
+        },
+        "sport": {
+            "name": "Sports Channels",
+            "icon": "fas fa-futbol",
+            "channels": [
+                {
+                    "id": "sport_1",
+                    "name": "BEIN Sports",
+                    "url": "https:\/\/bein-esp-xumo.amagi.tv\/playlist.m3u8",
+                    "logo": "espn1.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_2",
+                    "name": "ESPN 1",
+                    "url": "https:\/\/v1.thetvapp.to\/hls\/espn-deportes\/index.m3u8",
+                    "logo": "espn2.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_3",
+                    "name": "ESPN News",
+                    "url": "https:\/\/v1.thetvapp.to\/hls\/ESPNews\/index.m3u8",
+                    "logo": "espn3.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_4",
+                    "name": "ESPN 2",
+                    "url": "https:\/\/v1.thetvapp.to\/hls\/ESPNU\/index.m3u8",
+                    "logo": "espn4.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_5",
+                    "name": "FIFA",
+                    "url": "https:\/\/a62dad94.wurl.com\/master\/f36d25e7e52f1ba8d7e56eb859c636563214f541\/UmFrdXRlblRWLWV1X0ZJRkFQbHVzRW5nbGlzaF9ITFM\/playlist.m3u8",
+                    "logo": "laliga.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_6",
+                    "name": "FUEL TV",
+                    "url": "https:\/\/amg01074-fueltv-fueltvemeaen-rakuten-b6j62.amagi.tv\/hls\/amagi_hls_data_rakutenAA-fueltvemeaen\/CDN\/master.m3u8",
+                    "logo": "laliga.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_7",
+                    "name": "GAME PLUS",
+                    "url": "https:\/\/a-cdn.klowdtv.com\/live2\/fntsy_720p\/playlist.m3u8",
+                    "logo": "nba.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_8",
+                    "name": "RAKUTEN",
+                    "url": "https:\/\/rakutenaa-mainstreammediafreesportsintl-rakuten-t7dc0.amagi.tv\/playlist\/rakutenAA-mainstreammediafreesportsintl-rakuten\/playlist.m3u8",
+                    "logo": "olimpiade.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_9",
+                    "name": "TVRI SPORT",
+                    "url": "https:\/\/op-group1-swiftservesd-1.dens.tv\/s\/s107\/index.m3u8?app_type=web&userid=lite&chname=TVRI_Sport",
+                    "logo": "tvri sport.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_10",
+                    "name": "DENS PLAY",
+                    "url": "https:\/\/group1-swiftservehd-1.dens.tv\/h\/h246\/index1.m3u8?app_type=web&userid=lite&chname=DensPlay",
+                    "logo": "dens play.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_11",
+                    "name": "FIGHT SPORT",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h05\/index.m3u8?app_type=web&userid=lite&chname=FIGHT_SPORTS_HD",
+                    "logo": "fight sport.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_12",
+                    "name": "M PLUS",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h09\/01.m3u8?app_type=web&userid=lite&chname=Motorvision%2B",
+                    "logo": "fight sport.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_13",
+                    "name": "W SPORT",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h26\/index.m3u8?app_type=web&userid=lite&chname=W-Sport",
+                    "logo": "w sport.png",
+                    "status": "active"
+                },
+                {
+                    "id": "sport_14",
+                    "name": "WEDO SPORT",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h71\/wedo_sport.m3u8?app_type=web&userid=lite&chname=wedoSports",
+                    "logo": "w sport.png",
+                    "status": "active"
+                }
+            ]
+        },
+        "cartoon": {
+            "name": "Cartoon Channels",
+            "icon": "fas fa-child",
+            "channels": [
+                {
+                    "id": "cartoon_1",
+                    "name": "KIDSHD",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h191\/index.m3u8?app_type=web&userid=lite&chname=My_Kidz_HD",
+                    "logo": "                                                                                                                                                                                                                                    ",
+                    "status": "active"
+                },
+                {
+                    "id": "cartoon_2",
+                    "name": "ANIPLUS",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h201\/index.m3u8?app_type=web&userid=lite&chname=ANIPLUS_HD",
+                    "logo": "nick.png",
+                    "status": "active"
+                },
+                {
+                    "id": "cartoon_3",
+                    "name": "NICKELEDION",
+                    "url": "https://manifest.googlevideo.com/api/manifest/hls_variant/expire/1746942646/ei/VuYfaLLPL4SP6dsPiOv2yAc/ip/92.205.151.109/id/7ZlpCM4WtMI.1/source/yt_live_broadcast/requiressl/yes/xpc/EgVo2aDSNQ%3D%3D/tx/51477231/txs/51477230%2C51477231%2C51477232/hfr/1/playlist_duration/30/manifest_duration/30/maudio/1/bui/AecWEAa_oRL7EYunA0BxGdcbK7ORo9tfwYawN46C3grfzmkN5DisvFlNjCSye2iTU2vvaY3334FXOU2i/spc/wk1kZmUCWKcpDnXL_fTkDg33mXYqVYwdB3_69piKh26bVdz3ej6t0YaLxIKG14qX1vj4u8s/vprv/1/go/1/rqh/5/pacing/0/nvgoi/1/ncsapi/1/keepalive/yes/fexp/51355912/dover/11/itag/0/playlist_type/DVR/sparams/expire%2Cei%2Cip%2Cid%2Csource%2Crequiressl%2Cxpc%2Ctx%2Ctxs%2Chfr%2Cplaylist_duration%2Cmanifest_duration%2Cmaudio%2Cbui%2Cspc%2Cvprv%2Cgo%2Crqh%2Citag%2Cplaylist_type/sig/AJfQdSswRQIhAN_ORndSqQ-AgOdgcIAjxs7aQRl2888EDTkoz_jLEE3FAiA0PQfL0kx76zzsw6qOfIpMHaIaoAjNCgFigE5F0g1UQQ%3D%3D/file/index.m3u8",
+                    "logo": "test.png",
+                    "status": "active"
+                },
+                {
+                    "id": "cartoon_4",
+                    "name": "DISNEY CHANNEL",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h202\/index.m3u8?app_type=web&userid=lite&chname=Disney_Channel_HD",
+                    "logo": "disney.png",
+                    "status": "active"
+                },
+                {
+                    "id": "cartoon_5",
+                    "name": "DISNEY XD",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h203\/index.m3u8?app_type=web&userid=lite&chname=Disney_XD_HD",
+                    "logo": "disney xd.png",
+                    "status": "active"
+                },
+                {
+                    "id": "cartoon_6",
+                    "name": "NICK JR",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h204\/index.m3u8?app_type=web&userid=lite&chname=Nick_Jr_HD",
+                    "logo": "nick jr.png",
+                    "status": "active"
+                }
+            ]
+        },
+        "lokal": {
+            "name": "Local Channels",
+            "icon": "fas fa-tv",
+            "channels": [
+                {
+                    "id": "lokal_1",
+                    "name": "TVRI",
+                    "url": "https:\/\/op-group1-swiftservesd-1.dens.tv\/s\/s11\/index.m3u8?app_type=web&userid=lite&chname=TVRI",
+                    "logo": "tvri.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_2",
+                    "name": "TRANSTV",
+                    "url": "https:\/\/video.detik.com\/transtv\/smil:transtv.smil\/playlist.m3u8",
+                    "logo": "test.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_3",
+                    "name": "TRANS7",
+                    "url": "https:\/\/video.detik.com\/trans7\/smil:trans7.smil\/playlist.m3u8",
+                    "logo": "trans7.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_4",
+                    "name": "ANTV",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/s\/s07\/index.m3u8?app_type=web&userid=lite&chname=antv",
+                    "logo": "antv.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_5",
+                    "name": "MDTV",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h223\/index.m3u8?app_type=web&userid=lite&chname=MDTV",
+                    "logo": "mdtv.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_6",
+                    "name": "RTV",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h10\/index.m3u8?app_type=web&userid=lite&chname=RTV",
+                    "logo": "rtv.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_7",
+                    "name": "TVONE",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h40\/index.m3u8?app_type=web&userid=lite&chname=tvOne",
+                    "logo": "tvone.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_8",
+                    "name": "METROTV",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h12\/index.m3u8?app_type=web&userid=lite&chname=Metro_TV",
+                    "logo": "metrotv.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_9",
+                    "name": "KOMPASTV",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/s\/s104\/index.m3u8?app_type=web&userid=lite&chname=Kompas_TV",
+                    "logo": "kompastv.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_10",
+                    "name": "BTV",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h210\/index.m3u8?app_type=web&userid=lite&chname=BTV",
+                    "logo": "btv.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_11",
+                    "name": "MNCTV",
+                    "url": "https:\/\/mnctv-linier.rctiplus.id\/mnctv-sdi.m3u8?hdnts=exp=1746601146~hmac=c75ae3049bf5b17d5499444861cc7a5e2008ce84c7e96f3e8d0441af4141493b",
+                    "logo": "mnctv.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_12",
+                    "name": "SCTV",
+                    "url": "https:\/\/etslive-v3-vidio-com-tokenized.akamaized.net\/hls-p\/ingest_204_480p\/hdntl=exp=1746597717~acl=%2flive%2f204%2fmaster.m3u8!%2fhls-p%2fingest_204*%2f*!%2fhls-b%2fingest_204*%2f*~id=allUsers~data=hdntl~hmac=cea1f394fa8f79b1b9cf8c843b21407018a75fec019d816db854501aca03b703\/index.m3u8",
+                    "logo": "sctv.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_13",
+                    "name": "GTV",
+                    "url": "https:\/\/gtv-linier.rctiplus.id\/gtv-sdi.m3u8?hdnts=exp=1746584423~hmac=c58a63b31a7d18385643cdca43c76437c438ce045ad7e1180ab66dec751b98e9",
+                    "logo": "gtv.png",
+                    "status": "active"
+                },
+                {
+                    "id": "lokal_14",
+                    "name": "RCTI",
+                    "url": "https:\/\/rcti-linier.rctiplus.id\/hdntl=exp=1746619087~acl=%2F*~data=hdntl~hmac=cb35d4af8a45fa6f3a747b9df0bc1aea99bb8f4f61bbe6df73abd977cad68bd9\/rcti-sdi-avc1_450000=8-mp4a_96000=1.m3u8",
+                    "logo": "rcti.png",
+                    "status": "active"
+                }
+            ]
+        },
+        "event": {
+            "name": "Event Channels",
+            "icon": "fas fa-calendar-alt",
+            "channels": [
+                {
+                    "id": "event_1",
+                    "name": "ROCK ACTION",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h15\/index.m3u8?app_type=web&userid=lite&chname=ROCK_Action",
+                    "logo": "event1.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_2",
+                    "name": "KIX",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h07\/index.m3u8?app_type=web&userid=lite&chname=KIX_HD",
+                    "logo": "kix.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_3",
+                    "name": "KBS KOREA",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h241\/index.m3u8?app_type=web&userid=lite&chname=KBS_Korea",
+                    "logo": "kbs korea.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_4",
+                    "name": "KBS WORLD",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h243\/index.m3u8?app_type=web&userid=lite&chname=KBS_World",
+                    "logo": "kbs korea.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_5",
+                    "name": "K PLUS",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h08\/index.m3u8?app_type=web&userid=lite&chname=K-PLUS_HD",
+                    "logo": "k plus.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_6",
+                    "name": "TVN",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h20\/index.m3u8?app_type=web&userid=lite&chname=tvN_HD",
+                    "logo": "tvn.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_7",
+                    "name": "TVN MOVIE",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h21\/index.m3u8?app_type=web&userid=lite&chname=tvN_Movies_HD",
+                    "logo": "tvn.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_8",
+                    "name": "CELESTIAL MOVIE",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h14\/index.m3u8?app_type=web&userid=lite&chname=Celestial_Movies_HD",
+                    "logo": "celestial movie.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_9",
+                    "name": "CCM",
+                    "url": "https:\/\/op-group1-swiftservesd-1.dens.tv\/s\/s31\/index.m3u8?app_type=web&userid=lite&chname=CCM_Celestial_Classic_MV-",
+                    "logo": "celestial movie.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_10",
+                    "name": "CA CINEMA",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h193\/index.m3u8?app_type=web&userid=lite&chname=My_Cinema_Asia",
+                    "logo": "mycinema asia.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_11",
+                    "name": "THRILL",
+                    "url": "https:\/\/op-group1-swiftservesd-1.dens.tv\/s\/s34\/index.m3u8?app_type=web&userid=lite&chname=Thrill",
+                    "logo": "mycinema asia.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_12",
+                    "name": "CN CINEMA",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h192\/index.m3u8?app_type=web&userid=lite&chname=My_Cinema_HD",
+                    "logo": "cn cinema.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_13",
+                    "name": "MCE",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h18\/index.m3u8?app_type=web&userid=lite&chname=My_Cinema_Europe_HD",
+                    "logo": "cn cinema.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_14",
+                    "name": "FC CINEMA",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h194\/index.m3u8?app_type=web&userid=lite&chname=My_Family_Channel",
+                    "logo": "fc cinema.png",
+                    "status": "active"
+                },
+                {
+                    "id": "event_15",
+                    "name": "WEDO MOVIE",
+                    "url": "https:\/\/op-group1-swiftservehd-1.dens.tv\/h\/h70\/wedotv_movie.m3u8?app_type=web&userid=lite&chname=wedotvMovies",
+                    "logo": "fc cinema.png",
+                    "status": "active"
+                }
+            ]
+        }
+    },
+    "metadata": {
+        "last_updated": "2024-01-18",
+        "version": "1.0",
+        "total_channels": 16
+    }
+}

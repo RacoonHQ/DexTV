@@ -1,0 +1,944 @@
+:root {
+    /* Primary gradients - more muted & easier on eyes */
+    --gradient-primary: linear-gradient(125deg, #1E1E2F 0%, #252543 40%, #2B2B57 100%);
+    --gradient-secondary: linear-gradient(125deg, #23233A 0%, #2D2D4A 100%);
+    --gradient-accent: linear-gradient(125deg, #4B4BFF 0%, #6B6BFF 100%);
+    --gradient-dark: linear-gradient(125deg, #1A1A2E 0%, #1E1E2F 100%);
+    --gradient-card: linear-gradient(125deg, #2A2A45 0%, #323255 100%);
+    --gradient-hover: linear-gradient(125deg, #5757FF 0%, #7878FF 100%);
+    
+    /* Solid colors - softer palette */
+    --color-primary: #23233A;
+    --color-secondary: #2D2D4A;
+    --color-accent: #4B4BFF;
+    --color-text: #E8E8FF;
+    --color-text-secondary: #B4B4FF;
+    --color-border: rgba(255, 255, 255, 0.08);
+    
+    /* Shadows - softer */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.2);
+    --glow-soft: 0 0 20px rgba(75, 75, 255, 0.15);
+
+    /* Menu hover and active background colors */
+    --menu-hover-bg: rgba(75, 75, 255, 0.1);
+    --menu-active-bg: var(--gradient-accent);
+}
+
+/* Pastikan body dan html tidak bisa di-scroll */
+html, body {
+    font-family: Arial, sans-serif;
+    background: var(--gradient-dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden; /* Mencegah scroll pada seluruh halaman */
+    color: var(--color-text); /* Warna teks */
+    filter: brightness(0.97) contrast(0.95); /* Reduce overall contrast */
+}
+
+/* Background Video Styles */
+.bg-video-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.bg-video-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Overlay hitam dengan transparansi 70% */
+    z-index: 1;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* Override background for pages with video */
+.page-with-video {
+    background: transparent !important;
+}
+
+/* Navbar Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--gradient-dark);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 20px 50px; /* Increased padding */
+    color: var(--color-text);
+    box-shadow: var(--shadow-soft); /* Efek bayangan lebih tajam */
+    height: 85px; /* Increased from 75px to 85px */
+    transition: background-color 0.3s ease; /* Animasi perubahan warna */
+}
+
+header:hover {
+    background-color: var(--gradient-hover); /* Warna hover */
+}
+
+/* Logo di kiri */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-accent); /* Warna aksen */
+}
+
+/* Navbar di kanan */
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0px; /* Jarak antar menu lebih besar */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+/* Styling untuk menu navbar */
+nav ul li a {
+    color: var(--color-text); /* Ubah jadi putih */
+    text-decoration: none;
+    font-weight: 500; /* Sedikit lebih ringan dari bold */
+    font-size: 18px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek hover */
+nav ul li a:hover {
+    color: var(--color-accent); /* Warna aksen saat hover */
+    background: var(--menu-hover-bg);
+    transform: translateY(-2px);
+}
+
+/* Efek Active */
+nav ul li a.active {
+    background: var(--menu-active-bg);
+    color: var(--color-text);
+    font-weight: bold;
+    box-shadow: var(--glow-soft);
+}
+
+nav ul li a.active,
+nav ul li a.active:visited {
+    background: var(--gradient-accent, #4B4BFF);
+    color: #fff !important;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(75,75,255,0.08);
+}
+
+/* Optional: hover effect for active */
+nav ul li a.active:hover {
+    background: var(--gradient-hover, #7878FF);
+    color: #fff !important;
+}
+
+/* Hover animation */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 80%;
+}
+
+/* Tombol Search di kanan */
+#searchButton {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--color-accent);
+    margin-left: 20px; /* Jarak dari menu */
+    transition: color 0.3s ease;
+}
+
+#searchButton:hover {
+    color: var(--color-text); /* Teks putih saat hover */
+}
+
+#search {
+    display: none; /* Awalnya disembunyikan */
+    padding: 5px;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+/* Layout utama */
+#tv-container {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 85px); /* Adjusted to match new header height */
+    overflow: hidden;
+}
+
+/* Area Video */
+#video-wrapper {
+    flex: 0 0 80%; /* Set to exactly 80% width */
+    height: 100%;
+    position: relative;
+    background: #000;
+}
+
+.video-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+video#tvPlayer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Changed from cover to contain */
+    background: #000;
+}
+
+/* Custom Video Player Controls */
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgba(26, 26, 46, 0.85) 0%, rgba(26, 26, 46, 0.6) 100%);
+    backdrop-filter: blur(10px);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.play-pause-btn, .volume-btn, .fullscreen-btn {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 5px;
+    background: #333;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    background: var(--color-accent);
+    width: 0;
+    transition: width 0.1s linear;
+}
+
+.time-display {
+    color: var(--color-text);
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+/* Volume Slider Styling */
+.volume-slider {
+    width: 80px;
+    margin: 0 10px;
+    appearance: none;
+    background: rgba(75, 75, 255, 0.1); /* Warna track aksen transparan */
+    border-radius: 5px;
+    height: 5px;
+    outline: none; /* Menghilangkan outline default */
+}
+
+.volume-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--color-accent); /* Warna thumb aksen */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+    background: #5757FF; /* Warna aksen lebih gelap saat hover */
+    transform: scale(1.2);
+}
+
+.volume-slider::-moz-range-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--color-accent);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.volume-slider::-moz-range-thumb:hover {
+    background: #5757FF;
+    transform: scale(1.2);
+}
+
+.volume-slider::-moz-range-track {
+    background: rgba(75, 75, 255, 0.1);
+    border-radius: 5px;
+    height: 5px;
+}
+
+/* Daftar Channel */
+#channel-list {
+    flex: 0 0 20%; /* Set to exactly 20% width */
+    min-width: 250px;
+    background: var(--gradient-dark);
+    overflow-y: auto;
+    height: 100%;
+    padding: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    position: relative; /* Added to contain absolute positioned button */
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) var(--color-primary);
+}
+
+#channel-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#channel-list::-webkit-scrollbar-track {
+    background: var(--color-primary);
+    border-radius: 4px;
+}
+
+#channel-list::-webkit-scrollbar-thumb {
+    background-color: var(--color-accent);
+    border-radius: 4px;
+}
+
+#channel-list::-webkit-scrollbar-thumb:hover {
+    background-color: var(--gradient-hover);
+}
+
+/* Channel Divider Styling */
+.channel-divider {
+    display: none; /* Hide the divider */
+}
+
+.channel-divider:hover {
+    background: rgba(75, 75, 255, 0.1);
+}
+
+.channel-divider .toggle-icon {
+    width: 20px;
+    height: 40px;
+    background: var(--color-primary);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-accent);
+    transition: all 0.3s ease;
+}
+
+.channel-divider:hover .toggle-icon {
+    background: var(--gradient-hover);
+    color: var(--color-text);
+}
+
+/* Channel Styling */
+.channel {
+    backdrop-filter: blur(8px);
+    background: rgba(42, 42, 69, 0.8); /* More transparent */
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-soft);
+    padding: 12px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    color: var(--color-accent);
+}
+
+.channel:hover {
+    background: var(--gradient-secondary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong), var(--glow-soft);
+}
+
+.channel.active {
+    background: var(--gradient-accent);
+    border: none;
+    box-shadow: var(--glow-soft);
+}
+
+/* LIVE BUTTON */
+#liveButton {
+    position: absolute;
+    bottom: 50px; /* Margin bawah 10px */
+    left: 20px; /* Margin kiri 20px */
+    background: var(--gradient-accent);
+    box-shadow: var(--shadow-soft);
+    color: var(--color-text);
+    border: none;
+    padding: 6px 12px; /* Ukuran tombol diperkecil */
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px; /* Ukuran font diperkecil */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#liveButton:hover {
+    background: var(--gradient-hover);
+    transform: scale(1.1); /* Sedikit membesar saat hover */
+}
+
+/* LOADING */
+#loadingOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(26, 26, 46, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+    display: none;
+}
+
+#loadingOverlay .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: var(--color-accent) !important;
+}
+
+#loadingOverlay p {
+    color: var(--color-accent);
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+#loadingGif {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Toggle Channel List Button */
+#toggleChannelList {
+    position: absolute;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    border: none;
+    color: var(--color-accent);
+    width: 30px;
+    height: 60px;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+#toggleChannelList:hover {
+    background: var(--gradient-hover);
+    color: var(--color-text);
+}
+
+/* Toggle Button Styling - Updated */
+.toggle-icon {
+    position: absolute;
+    right: -30px; /* Positioned outside the channel list */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 60px;
+    background: var(--color-primary);
+    border: none;
+    color: var(--color-accent);
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.toggle-icon:hover {
+    background: var(--gradient-hover);
+    color: var(--color-text);
+    width: 35px;
+}
+
+/* Toggle Button Styling */
+.toggle-btn {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--color-primary);
+    border: none;
+    color: var(--color-accent);
+    width: 30px;
+    height: 60px;
+    border-radius: 30px 0 0 30px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-btn:hover {
+    background: var(--gradient-hover);
+    color: var(--color-text);
+}
+
+/* Floating Menu */
+.menu-btn-container {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.menu-dropdown {
+    position: absolute;
+    right: 0;
+    bottom: 45px;
+    background: rgba(42, 42, 69, 0.95);
+    border-radius: 4px;
+    padding: 8px;
+    width: 250px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transform: none;
+}
+
+.menu-dropdown::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 14px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(42, 42, 69, 0.95);
+}
+
+.menu-item {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+.menu-item select {
+    background: #383838;
+    color: var(--color-text);
+    border: none;
+    padding: 6px;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+    width: 120px;
+}
+
+.menu-item select:hover {
+    background: #404040;
+}
+
+/* New eye comfort features */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text: #E8E8FF;
+        --color-text-secondary: #B4B4FF;
+    }
+    
+    * {
+        font-smooth: always;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+/* Reduce blue light in evening hours */
+@media (prefers-color-scheme: dark) and (max-width: 100%) {
+    html {
+        filter: sepia(10%) brightness(95%) contrast(90%);
+    }
+}
+
+/* Auth Pages Styling */
+.auth-card {
+    background: var(--gradient-card);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-soft);
+}
+
+.auth-card h3 {
+    color: var(--color-text);
+}
+
+/* Feature Cards */
+.feature-card {
+    background: var(--gradient-card);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+    color: var(--color-text);
+    box-shadow: var(--shadow-soft);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+    background: var(--gradient-secondary);
+}
+
+.feature-card i {
+    color: var(--color-accent);
+}
+
+.feature-card h5 {
+    color: var(--color-text);
+    margin: 1rem 0;
+}
+
+.feature-card p {
+    color: var(--color-text-secondary);
+}
+
+/* Typography */
+.display-4 {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.lead {
+    color: var(--color-text-secondary);
+}
+
+/* Form Elements */
+.form-label {
+    color: var(--color-text-secondary);
+}
+
+.input-group-text {
+    background: var(--color-secondary);
+    border: 1px solid var(--color-border);
+    color: var(--color-accent);
+}
+
+.custom-input {
+    background: var(--color-secondary) !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-text) !important;
+}
+
+.custom-input:focus {
+    box-shadow: 0 0 0 2px rgba(75, 75, 255, 0.25) !important;
+    border-color: var(--color-accent) !important;
+}
+
+/* Links & Buttons */
+.text-accent {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.text-accent:hover {
+    color: var(--color-text);
+}
+
+.toggle-password {
+    border-color: var(--color-border);
+    color: var(--color-text-secondary);
+}
+
+.toggle-password:hover {
+    background: var(--color-secondary);
+    color: var(--color-accent);
+}
+
+/* Chat Styling */
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-toggle-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--gradient-accent);
+    border: none;
+    color: var(--color-text);
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+}
+
+.chat-toggle-btn:hover {
+    transform: scale(1.1);
+    background: var(--gradient-hover);
+}
+
+.chat-box {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 300px;
+    background: var(--gradient-card);
+    border-radius: 10px;
+    box-shadow: var(--shadow-strong);
+    transition: all 0.3s ease;
+}
+
+.chat-box.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.chat-header {
+    padding: 15px;
+    background: var(--gradient-dark);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h5 {
+    margin: 0;
+    color: var(--color-text);
+}
+
+.chat-close-btn {
+    background: none;
+    border: none;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+.chat-form {
+    padding: 15px;
+}
+
+.chat-input {
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) var(--color-primary);
+}
+
+.chat-input::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-input::-webkit-scrollbar-track {
+    background: var(--color-primary);
+    border-radius: 4px;
+}
+
+.chat-input::-webkit-scrollbar-thumb {
+    background-color: var(--color-accent);
+    border-radius: 4px;
+}
+
+.chat-input::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-accent);
+}
+
+.btn-send {
+    background: var(--gradient-accent);
+    color: var(--color-text);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.btn-send:hover {
+    background: var(--gradient-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-strong), var(--glow-soft);
+    color: var(--color-text);
+}
+
+/* Alert Styling */
+.alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.custom-alert {
+    background: var(--gradient-card);
+    color: var(--color-text);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow-strong);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 300px;
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+}
+
+.custom-alert.show {
+    transform: translateX(0);
+}
+
+.custom-alert i {
+    font-size: 1.2rem;
+}
+
+.custom-alert.success {
+    border-left: 4px solid #4BB543;
+}
+
+.custom-alert.success i {
+    color: #4BB543;
+}
+
+.custom-alert.error {
+    border-left: 4px solid #dc3545;
+}
+
+.custom-alert.error i {
+    color: #dc3545;
+}
+
+.custom-alert.warning {
+    border-left: 4px solid #ffc107;
+}
+
+.custom-alert.warning i {
+    color: #ffc107;
+}
+
+.custom-alert h6 {
+    color: var(--color-text);
+    margin: 0;
+    font-weight: 600;
+}
+
+.custom-alert p {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    margin: 0;
+}
+
+.custom-alert .btn-sm {
+    padding: 0.25rem 1rem;
+    font-size: 14px;
+}
+
+.custom-alert.warning .btn-danger {
+    background: linear-gradient(125deg, #dc3545 0%, #ff4d5b 100%);
+    border: none;
+    box-shadow: var(--shadow-soft);
+}
+
+.custom-alert.warning .btn-danger:hover {
+    background: linear-gradient(125deg, #bb2d3b 0%, #dc3545 100%);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-strong);
+}
+
+
+

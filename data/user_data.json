@@ -1,0 +1,52 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "admin",
+            "password": "admin123",
+            "role": "admin"
+        },
+        {
+            "id": 2,
+            "username": "user",
+            "password": "user123",
+            "role": "user"
+        },
+        {
+            "id": 3,
+            "username": "zaza",
+            "password": "zaza123",
+            "role": "user"
+        },
+        {
+            "id": 4,
+            "username": "aku",
+            "password": "aku123",
+            "role": "user"
+        },
+        {
+            "id": 5,
+            "username": "ayi",
+            "password": "ayi123",
+            "role": "user"
+        },
+        {
+            "id": 6,
+            "username": "demo",
+            "password": "123456",
+            "role": "user"
+        },
+        {
+            "id": 7,
+            "username": "papi",
+            "password": "123456",
+            "role": "user"
+        },
+        {
+            "id": 8,
+            "username": "ahay",
+            "password": "123456",
+            "role": "user"
+        }
+    ]
+}

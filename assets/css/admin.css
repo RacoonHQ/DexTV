@@ -1,0 +1,352 @@
+:root {
+    /* Primary gradients - more muted & easier on eyes */
+    --gradient-primary: linear-gradient(125deg, #1E1E2F 0%, #252543 40%, #2B2B57 100%);
+    --gradient-secondary: linear-gradient(125deg, #23233A 0%, #2D2D4A 100%);
+    --gradient-accent: linear-gradient(125deg, #4B4BFF 0%, #6B6BFF 100%);
+    --gradient-dark: linear-gradient(125deg, #1A1A2E 0%, #1E1E2F 100%);
+    --gradient-card: linear-gradient(125deg, #2A2A45 0%, #323255 100%);
+    --gradient-hover: linear-gradient(125deg, #5757FF 0%, #7878FF 100%);
+    
+    /* Solid colors - softer palette */
+    --color-primary: #23233A;
+    --color-secondary: #2D2D4A;
+    --color-accent: #4B4BFF;
+    --color-text: #E8E8FF;
+    --color-text-secondary: #B4B4FF;
+    --color-border: rgba(255, 255, 255, 0.08);
+    
+    /* Letter spacing for better readability */
+    --letter-spacing-normal: 0.02em;
+    --letter-spacing-wide: 0.04em;
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.25);
+    --shadow-strong: 0 8px 30px rgba(0, 0, 0, 0.35);
+    --glow-purple: 0 0 20px rgba(107, 33, 219, 0.3);
+}
+
+.admin-body {
+    background: var(--gradient-primary);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    letter-spacing: var(--letter-spacing-normal);
+    font-weight: 400;
+}
+
+.admin-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.admin-header {
+    background: var(--gradient-dark);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--color-border);
+}
+
+.admin-title {
+    color: var(--color-text);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.category-nav {
+    background: var(--gradient-secondary);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-pills .nav-link {
+    color: var(--color-text) !important;
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-pills .nav-link:hover {
+    color: var(--color-accent) !important;
+    background: var(--menu-hover-bg);
+    transform: translateY(-2px);
+}
+
+.nav-pills .nav-link.active {
+    background: var(--menu-active-bg);
+    color: var(--color-text) !important;
+    font-weight: bold;
+}
+
+.nav-pills .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--color-accent);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-pills .nav-link:hover::after {
+    width: 80%;
+}
+
+.admin-content {
+    background: var(--gradient-dark);
+    border-radius: 10px;
+    padding: 2rem;
+    height: calc(100vh - 200px); /* Fixed height */
+    overflow: hidden; /* Prevent content scroll */
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.category-title {
+    color: #E8E8FF;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.btn-add {
+    background: var(--gradient-accent);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-add:hover {
+    background: var(--gradient-hover);
+    transform: translateY(-2px);
+    color: #fff;
+    box-shadow: var(--shadow-strong), var(--glow-purple);
+}
+
+.table-container {
+    height: calc(100% - 80px); /* Take remaining space */
+    overflow-y: auto; /* Enable vertical scroll */
+    border-radius: 8px;
+    background: var(--gradient-secondary);
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) var(--color-primary);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-soft);
+    overflow-x: auto; /* Enable horizontal scroll if needed */
+}
+
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: var(--color-primary);
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: var(--color-accent);
+    border-radius: 4px;
+}
+
+.table {
+    margin: 0;
+    line-height: 1.6;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table thead th {
+    background: var(--gradient-dark);
+    color: var(--color-text);
+    border: none;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    border-color: var(--color-border);
+}
+
+.table tbody td {
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.table td.text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 0; /* Forces truncation */
+}
+
+.table td.text-truncate:hover {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.table td.text-truncate:hover span {
+    display: none;
+}
+
+.table td:last-child {
+    white-space: nowrap;
+    width: 150px;
+}
+
+.table td:last-child .d-flex {
+    margin: 0 -0.25rem;
+}
+
+.table td:last-child .btn {
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.25rem;
+}
+
+/* Center status icons */
+.channel-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Modal improvements */
+.modal-content {
+    background: var(--color-primary);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-strong);
+}
+
+.modal-header {
+    background: var(--color-secondary);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.modal-footer {
+    background: var(--color-secondary);
+    border-top: 1px solid var(--color-border);
+}
+
+.modal-body {
+    background: var(--color-primary);
+    color: var(--color-text);
+}
+
+.form-label {
+    color: #fff !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    opacity: 1;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.custom-input {
+    background: var(--color-secondary) !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-text) !important;
+}
+
+.custom-input:focus {
+    background: var(--color-secondary) !important;
+    border-color: var(--color-accent) !important;
+    box-shadow: 0 0 0 2px rgba(75, 75, 255, 0.25) !important;
+}
+
+.input-group-text {
+    background: var(--color-primary) !important;
+    border: 1px solid var(--color-border) !important;
+    color: var(--color-text-secondary) !important;
+}
+
+.text-muted {
+    color: var(--color-text-secondary) !important;
+    opacity: 0.9;
+}
+
+.modal-title {
+    color: #fff;
+    font-weight: 500;
+}
+
+.modal-sm {
+    max-width: 400px;
+}
+
+.btn-close-white {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+.btn-primary {
+    background: var(--gradient-accent);
+    box-shadow: var(--shadow-soft);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background: var(--gradient-hover);
+    box-shadow: var(--shadow-strong), var(--glow-purple);
+}
+
+/* Badge colors */
+.badge.bg-success {
+    background: var(--gradient-accent) !important;
+}
+
+.badge.bg-danger {
+    background: linear-gradient(125deg, #dc3545 0%, #ff4d5b 100%) !important;
+}
+
+/* Button styles */
+.btn-outline-light {
+    color: var(--color-text);
+    border-color: var(--color-border);
+}
+
+.btn-outline-light:hover {
+    background: var(--gradient-secondary);
+    border-color: var(--color-accent);
+}
+
+.btn-danger {
+    background: linear-gradient(125deg, #dc3545 0%, #ff4d5b 100%);
+    border: none;
+}
+
+.btn-danger:hover {
+    background: linear-gradient(125deg, #bb2d3b 0%, #dc3545 100%);
+}
+
+/* Improve text readability */
+* {
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
