@@ -12,15 +12,12 @@ DexTV adalah platform streaming TV online yang menyediakan berbagai channel loka
 ## Developer
 **Sayyid Abdullah Azzam**
 
-## Demo
-Kunjungi website DexTV: [https://dextv.wuaze.com/](https://dextv.wuaze.com/)
-
 ## Instalasi
-1. Clone repository ke server lokal/web hosting.
-2. Pastikan PHP, MySQL, dan web server (Apache/Nginx) sudah terpasang.
-3. Import database jika ada.
-4. Edit file `includes/config.php` untuk konfigurasi koneksi database dan path.
-5. Jalankan di browser: `https://dextv.wuaze.com/`
+1. Clone repository ke server lokal atau web hosting.
+2. Pastikan PHP dan web server (Apache/Nginx) sudah terpasang.
+3. Data channel disimpan di file JSON, tidak perlu setup database MySQL.
+4. Edit file `includes/config.php` untuk konfigurasi path jika diperlukan.
+5. Jalankan di browser: `http://localhost/DexTV/` atau akses DexTv
 
 ## Keamanan
 - Semua input divalidasi di sisi server dan client.
